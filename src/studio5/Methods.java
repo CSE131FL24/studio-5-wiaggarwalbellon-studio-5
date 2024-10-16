@@ -15,8 +15,11 @@ public class Methods {
 	 */
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double distance = 0;
+		double variableX = x2 - x1;
+		double variableY = y2 - y1;
+				
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
-		
+		distance = Math.sqrt(variableX * variableX + variableY * variableY);
 		return distance;
 	}
 
@@ -34,17 +37,22 @@ public class Methods {
 		// TODO: Draw the remaining rings of the bull's eye
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
-
+		StdDraw.setPenColor(0, 109, 219);
+		double blueRadiusMultiplier = 3.0 / 4.0;
+		StdDraw.filledCircle(x, y, (blueRadiusMultiplier * radius));
 		
 
 		// Red ring with 1.0/2.0 the radius
 		// suggested rgb values: 146, 0, 0
-
-		
+		StdDraw.setPenColor(146, 0, 0);
+		double redRadiusMultiplier = 1.0 / 2.0;
+		StdDraw.filledCircle(x, y, (redRadiusMultiplier * radius));
 
 		// Yellow ring with 1.0/4.0 the radius
 		// suggested rgb values: 255, 255, 109
-
+		StdDraw.setPenColor(255, 255, 109);
+		double yellowRadiusMultiplier = 1.0 / 4.0;
+		StdDraw.filledCircle(x, y, (yellowRadiusMultiplier * radius));
 		
 	}
 
