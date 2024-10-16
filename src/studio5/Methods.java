@@ -102,13 +102,16 @@ public class Methods {
 		for (int i=0; i<values.length; i++) {
 			values[i] = value;
 		}
-		
-		
-
 		return values;
 	}
 
 	// TODO: Create an arrayMean method which accepts an int array of values parameter.
+	public static double arrayMean(int[] values) {
+		double y = arraySum(values);
+		
+		
+		return values;
+	}
 	// TODO: Create a JavaDoc comment for the arrayMean method.
 
 	
